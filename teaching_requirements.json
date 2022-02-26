@@ -1,0 +1,47 @@
+{
+    {
+    "teaching requirements": [
+        {
+            "classname": "math",
+            "requirements": "major is math"
+        },
+
+        {
+            "classname": "physics",
+            "requirements": "major is physics"
+        },
+
+        {
+            "classname": "history",
+            "requirements": "major is history"
+        },
+
+        {
+            "classname": "chemistry",
+            "requirements": "major is chemistry"
+        }
+    ]}
+    ,
+    {
+    "teacher lists": [
+        {
+            "name": "Bob",
+            "major": "history"
+        },
+
+        {
+            "name": "Mike",
+            "major": "math"
+        },
+
+        {
+            "name": "Tom",
+            "major": "physics"
+        },
+
+        {
+            "name": "Steve",
+            "major": "chemistry"
+        }
+    ]}
+}
