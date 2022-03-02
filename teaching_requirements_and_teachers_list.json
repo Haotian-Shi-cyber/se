@@ -1,5 +1,4 @@
 {
-    {
     "teaching requirements": [
         {
             "classname": "math",
@@ -20,10 +19,9 @@
             "classname": "chemistry",
             "requirements": "major is chemistry"
         }
-    ]}
+    ],
     ,
 
-    {
     "teacher lists": [
         {
             "name": "Bob",
@@ -44,5 +42,6 @@
             "name": "Steve",
             "major": "chemistry"
         }
-    ]}
+    ]
 }
+
