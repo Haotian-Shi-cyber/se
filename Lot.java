@@ -1,18 +1,23 @@
 
-/* list of people */
+
 public class Lot{
     
     private Teacher[] list;
-    private int i, max;
-
+    private nteachers;
+    private static int max_teachers=100;
     public Lot() {
-        list  = new Teacher[max];
+        list  = new Teacher[max_teachers];
+        nteachers=0;
     }
     
-    public 
-
+    public int getTeacherNum(){
+        return this.nteachers;
+    }
+    public void addTeacher(Teacher teacher){
+        this.list[nteacher++]=teacher;
+    }
     public Teacher find(String personName) {
-        for(int j = 0; j < i; j++)
+        for(int j = 0; j < nteachers; j++)
             if(list[j].getName().equals(personName))
                 return list[j];
         return null;
