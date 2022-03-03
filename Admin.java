@@ -45,8 +45,21 @@ public class Admin{
 	}
 	
 	
-	public static void find_suitable_staff(Lot lot) {
-		int list_size=lot.get
+	public static String find_suitable_staff(Calss class,Lot lot) {// this function return the target teacher name
+		int list_size=lot.getTeacherNum;
+		String target_teacher;
+		int index;
+		int highest_score;
+		for(int i=0,index=i;i<list_size;i++){
+			Teacher t=lot[i];
+			if(t.getMajor!=class.)
+			int score=t.calScore();
+			if (score > highest_score){
+				highest_score= score;
+				index=i;
+			}
+		}
+		return lot[index].getName;
 		
 	}
 	
