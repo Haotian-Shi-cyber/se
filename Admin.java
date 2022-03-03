@@ -7,11 +7,11 @@ import java.io.*;
 
 public class Admin{
 	
-	private static JSONObject jsonObject;
-	private static JSONArray teacherArray;
-	private static JSONArray classArray;
+	private JSONObject jsonObject;
+	private JSONArray teacherArray;
+	private JSONArray classArray;
 	
-	public static void read_file() throws IOException, ParseException {
+	public void read_file() throws IOException, ParseException {
 		JSONParser parser = new JSONParser();
 		
 		Reader reader = new FileReader("./teaching_requirements_and_teachers_list.json");
@@ -19,7 +19,7 @@ public class Admin{
 		jsonObject = (JSONObject) parser.parse(reader);
 	}
 
-	public static void add_staff() {
+	public void add_staff() {
 		Lot teacherList = new Lot();
 		
 		teacherArray = (JSONArray) jsonObject.get("teacher lists"); // get teacher array 
@@ -32,7 +32,7 @@ public class Admin{
 		
 	}
 	
-	public static void add_class() {
+	public void add_class() {
 		Loc classList = new Loc();
 		
 		classArray = (JSONArray) jsonObject.get("teaching requirements");
@@ -45,14 +45,14 @@ public class Admin{
 	}
 	
 	
-	public static String find_suitable_staff(Calss class,Lot lot) {// this function return the target teacher name
+	public String find_suitable_staff(Class thisclass,Lot lot) {// this function return the target teacher name
 		int list_size=lot.getTeacherNum;
 		String target_teacher;
 		int index;
 		int highest_score;
 		for(int i=0,index=i;i<list_size;i++){
 			Teacher t=lot[i];
-			if(t.getMajor()!=class.getCollege()){
+			if(t.getMajor()!= thisclass.getCollege()){
 				continue;
 			}
 			int score=t.calScore();
@@ -65,11 +65,11 @@ public class Admin{
 		
 	}
 	
-	public static void create_file() {
+	public void create_file() {
 		
 	}
 	
-	public static void main(String[] args) throws IOException, ParseException{
+	public void main(String[] args) throws IOException, ParseException{
 		
 		read_file();
 		add_staff();
@@ -82,4 +82,3 @@ public class Admin{
 	
 	
 }
-	
