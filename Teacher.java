@@ -6,13 +6,20 @@ public class Teacher {
     private int course_num;  //this represent how many course currently 
     private int student_rating;
 
-    public Teacher(String personName) {
-        this.name = personName;
+    public Teacher(String personName,String major,int teaching_year,int course_num,int student_rating) {
+        name = personName;
+        major= major;
+        teaching_year=teaching_year;
+        course_num=course_num;
+        student_rating=student_rating;
     }
-
+    public String getMajor(){
+        return this.major;
+        
     public String getName() {
         return this.name;
     }
+        
     public int calScore(){
         int experience_score=0;
         int stress_score=0;
