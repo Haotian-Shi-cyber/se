@@ -45,7 +45,8 @@ public class Admin{
 	}
 	
 	
-	public static void find_suitable_staff() {
+	public static void find_suitable_staff(Lot lot) {
+		int list_size=lot.get
 		
 	}
 	
