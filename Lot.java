@@ -11,10 +11,10 @@ public class Lot{
     }
     
     public int getTeacherNum(){
-        return this.nteachers;
+        return nteachers;
     }
     public void addTeacher(Teacher teacher){
-        this.list[nteacher++]=teacher;
+        list[nteacher++]=teacher;
     }
     public Teacher find(String personName) {
         for(int j = 0; j < nteachers; j++)
