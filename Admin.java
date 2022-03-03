@@ -52,7 +52,9 @@ public class Admin{
 		int highest_score;
 		for(int i=0,index=i;i<list_size;i++){
 			Teacher t=lot[i];
-			if(t.getMajor!=class.)
+			if(t.getMajor()!=class.getCollege()){
+				continue;
+			}
 			int score=t.calScore();
 			if (score > highest_score){
 				highest_score= score;
