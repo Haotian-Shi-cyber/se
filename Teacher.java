@@ -1,7 +1,7 @@
 public class Teacher {
 
     private String name;
-    pirvate String major;
+    private String major;
     private int teaching_year;
     private int course_num;  //this represent how many course currently 
     private int student_rating;
