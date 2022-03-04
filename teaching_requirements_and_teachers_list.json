@@ -2,22 +2,22 @@
     "teaching requirements": [
         {
             "classname": "math",
-            "requirements": "major is math"
+            "college": "School of Science"
         },
 
         {
             "classname": "physics",
-            "requirements": "major is physics"
+            "college": "School of Science"
         },
 
         {
             "classname": "history",
-            "requirements": "major is history"
+            "college": "School of Arts"
         },
 
         {
             "classname": "chemistry",
-            "requirements": "major is chemistry"
+            "college": "School of Science"
         }
     ],
     ,
