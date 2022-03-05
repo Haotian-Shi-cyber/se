@@ -15,8 +15,8 @@ public class Lot{
     }
     
     public void addTeacher(Teacher teacher) throws Lopx{
-	if (nteachers >= max_teachers)
-		throw new Lopx(max_teachers);
+		if (nteachers >= max_teachers)
+			throw new Lopx(max_teachers);
         list[nteachers++]=teacher;
     }
     
