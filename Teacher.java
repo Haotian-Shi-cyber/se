@@ -23,20 +23,20 @@ public class Teacher {
         return this.name;
     }
         
-    public int calScore(){
-        int experience_score=0;
-        int stress_score=0;
+    public double calScore(){
+        double experience_score=0;
+        couble stress_score=0;
         int satisfication_score=0;
         if (year>10)
             experience_score=10;
         else
-            experience_score=year;
+            experience_score=this.year;
         if (num>=3)
             stress_score=0;
         else 
-            stress_score=(3-num)*3;
-        stress_score=rating;
-        int total_score=0.5*stress_score+0.2*experience_score+0.3*rating;
+            stress_score=(3-this.num)*3;
+        satisfication_score=rating;
+        double total_score=0.5*stress_score+0.2*experience_score+0.3*satisfication_score;
         return total_score;
     }
 }
