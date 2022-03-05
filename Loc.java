@@ -11,7 +11,8 @@ public class Loc {
         list = new Class[max];
         i = 0;
     }
-    public void add(Class classes)	{
+    
+    public void add(Class classes){
 		list[i++] = classes;
 	}
 
@@ -23,6 +24,14 @@ public class Loc {
         i--;
         for (; j < i; j++)
             list[j] = list[j+1];
+    }
+    
+    public Class get(int i) {
+    	return list[i];
+    }
+    
+    public int getSize() {
+    	return i;
     }
 
 }
