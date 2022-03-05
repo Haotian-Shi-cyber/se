@@ -25,7 +25,7 @@ public class Teacher {
         
     public double calScore(){
         double experience_score=0;
-        couble stress_score=0;
+        double stress_score=0;
         int satisfication_score=0;
         if (year>10)
             experience_score=10;
