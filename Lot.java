@@ -4,6 +4,7 @@ public class Lot{
     private Teacher[] list;
     private int nteachers;
     private static int max_teachers=100;
+    
     public Lot() {
         list  = new Teacher[max_teachers];
         nteachers=0;
@@ -13,7 +14,9 @@ public class Lot{
         return nteachers;
     }
     
-    public void addTeacher(Teacher teacher){
+    public void addTeacher(Teacher teacher) throws Lopx{
+		if (nteachers >= max_teachers)
+			throw new Lopx(max_teachers);
         list[nteachers++]=teacher;
     }
     
