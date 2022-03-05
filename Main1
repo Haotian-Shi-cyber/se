@@ -1,0 +1,26 @@
+import java.io.IOException;
+import java.util.Date;
+
+import org.json.simple.*;
+import org.json.simple.parser.ParseException;
+
+public class Main1 {
+
+	public static void main(String[] args) throws Lopx, IOException, ParseException	{
+		
+		FileProcessor file = new FileProcessor("./teaching_requirements_and_teachers_list.json");
+		file.read_file();
+		JSONArray teacherArray = file.get_teachers_array();
+		JSONArray classArray = file.get_classes_array();
+		
+		class_director Alice = new class_director(); // Alice is the class director
+		Alice.add_all_staff(teacherArray);
+		Alice.add_all_class(classArray);
+		
+		Admin Bob = new Admin();
+		Bob.match_all(Alice.get_classList(), Alice.get_teacherList());
+		Bob.create_file();
+		System.out.println("good night");
+	}
+	
+}
