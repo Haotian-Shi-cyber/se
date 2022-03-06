@@ -24,7 +24,7 @@ public class Admin{
 		
 		for(int i=0;i<list_size;i++){
 			Teacher t=list[i];
-			if(t.getMajor()!= thisclass.getCollege()){
+			if(t.getMajor()!= thisclass.getName()){
 				continue;
 			}
 			double score=t.calScore();
