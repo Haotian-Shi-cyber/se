@@ -3,7 +3,7 @@ public class Lot{
     
     private Teacher[] list;
     private int nteachers;
-    private static int max_teachers=100;
+    private int max_teachers=100;
     
     public Lot() {
         list  = new Teacher[max_teachers];
@@ -30,5 +30,10 @@ public class Lot{
     public Teacher[] getTeacherList() {
     	return list;
     }
+    
+    public int get_maxTeachers() {
+    	return this.max_teachers;
+    }
+    
 
 }
