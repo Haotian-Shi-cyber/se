@@ -39,4 +39,13 @@ public class Teacher {
         double total_score=0.5*stress_score+0.2*experience_score+0.3*satisfication_score;
         return total_score;
     }
+    
+
+	public boolean isTraining() {
+		return training;
+	}
+
+	public void setTraining() {
+		this.training = true;
+	}
 }
