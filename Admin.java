@@ -58,5 +58,11 @@ public class Admin{
         file.close();
 	}
 	
+	public void set_training(Lot teacherList) {
+		for(int i = 0; i < teacherList.getTeacherNum();i++) {
+			Teacher[] list= teacherList.getTeacherList();
+			list[i].set_train();
+		}
+	}
 		
 }
