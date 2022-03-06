@@ -1,5 +1,4 @@
 /* list of classes  */
-import java.io.*;
 
 public class Loc {
 
