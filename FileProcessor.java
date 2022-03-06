@@ -34,7 +34,6 @@ public class FileProcessor {
 	
 	public JSONArray get_classes_array() {
 		return classArray;
-	}
-	
+	}	
 	
 }
