@@ -20,6 +20,9 @@ public class Main1 {
 		Admin Bob = new Admin();
 		Bob.match_all(Alice.get_classList(), Alice.get_teacherList());
 		Bob.create_file();
+		/*
+		 to be added, set training
+		 */
 		System.out.println("good night");
 	}
 	
