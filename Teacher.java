@@ -12,6 +12,13 @@ public class Teacher extends Person{
         this.num=course_num;
         this.rating=student_rating;
     }
+
+    //Returns a string representation of teacher.
+    @Override
+    public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
+    }
+
     public double calScore(){
         double experience_score=0;
         double stress_score=0;
@@ -28,7 +35,7 @@ public class Teacher extends Person{
         double total_score=0.5*stress_score+0.2*experience_score+0.3*satisfication_score;
         return total_score;
     }
-
+    //Add class in teacher object
     public Class get_classes()
     {
         return classes;
@@ -49,5 +56,7 @@ public class Teacher extends Person{
 
         this.training = true;
     }
+
+
 
 }

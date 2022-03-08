@@ -5,15 +5,16 @@ import java.util.HashMap;
 import java.util.Objects;
 
 
-public class Admin{
+public class Admin extends Person{
 
 	private HashMap<String,String> map;
 	private ArrayList<String> trainingList;
-	
-	public Admin() {
-		//do nothing
-	}	
-	
+
+	public Admin(String personName,String teachermajor) {
+		super(personName, teachermajor);
+	}
+
+
 	private String find_suitable_staff(Class thisclass, Lot lot) {// this function return the target teacher name
 		int list_size=lot.getTeacherNum();
 		int index1 = 0;
@@ -35,7 +36,7 @@ public class Admin{
 		return list[index1].getName();
 		
 	}
-	
+
 	public void match_all(Loc classList, Lot teacherList) {
 		String teachername;
 		this.map = new HashMap<String, String>();
@@ -51,12 +52,12 @@ public class Admin{
 		
 		}
 	}
-	
+
 	public HashMap<String,String> get_map() {
 		return this.map;
 	}
-	
-	
+
+
 	public void create_file() throws IOException {
 		JSONObject result = new JSONObject(this.map);
 		FileWriter file = new FileWriter("./result.json");
@@ -74,5 +75,5 @@ public class Admin{
 	public ArrayList<String> get_trainingList() {
 		return this.trainingList;
 	}
-		
+
 }

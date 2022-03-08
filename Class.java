@@ -19,6 +19,7 @@ public class Class {
         return this.college;
 	}
 
+    //Add teacher in class object
     public Teacher get_teacher()
     {
         return teacher;

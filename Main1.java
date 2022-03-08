@@ -16,11 +16,11 @@ public class Main1 {
 		System.out.println("print teacherArray: " + teacherArray);
 		System.out.println("print classArray: " + classArray);
 		
-		class_director Alice = new class_director(); // Alice is the class director
+		class_director Alice = new class_director("class_director","major"); // Alice is the class director
 		Alice.add_all_staff(teacherArray); // add all staff to list
 		Alice.add_all_class(classArray); // add all class to list
 		
-		Admin Bob = new Admin(); // Bob is the administrator
+		Admin Bob = new Admin("admin","major"); // Bob is the administrator
 		Bob.match_all(Alice.get_classList(), Alice.get_teacherList()); // find all suitable staff for all class
 		Bob.create_file(); // create a new file containing teacher versus class
 		Bob.set_training(Alice.get_teacherList()); // set training for staff
