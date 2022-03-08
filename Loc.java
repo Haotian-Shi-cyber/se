@@ -3,26 +3,30 @@
 public class Loc {
 
     private Class[] list;
-    private int i,max;
+    private int max;
+    private int nclasses;
 
     public Loc() {
         max = 10;
         list = new Class[max];
-        i = 0;
+        nclasses = 0;
     }
-    
+
+    //add class into the list of class
     public void add(Class classes){
-		list[i++] = classes;
+
+        list[nclasses++] = classes;
 	}
 
+    //remove class
     public void remove(Class classes) {
-        int	j;
-        for (j = 0; j < i; j++)
-            if (list[j] == classes)
+        int	i;
+        for (i = 0; i < nclasses; i++)
+            if (list[i] == classes)
                 break;
-        i--;
-        for (; j < i; j++)
-            list[j] = list[j+1];
+        nclasses--;
+        for (; i < nclasses; i++)
+            list[i] = list[i+1];
     }
     
     public Class get(int i) {
@@ -30,7 +34,8 @@ public class Loc {
     }
     
     public int getSize() {
-    	return i;
+
+        return nclasses;
     }
 
 }
