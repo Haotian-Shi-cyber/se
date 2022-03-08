@@ -18,7 +18,13 @@
         {
             "classname": "chemistry",
             "college": "School of Science"
+        },
+        
+        {
+            "classname": "computer",
+            "college": "School of Science"
         }
+        
     ],
     ,
 
@@ -53,30 +59,44 @@
             "teaching_year": 7
             "course_on_charge": 0
             "student_rating": 3
-        }
+        },
         {
-            "name": "Steve",
+            "name": "Bruce",
             "major": "math"
             "teaching_year": 7
             "course_on_charge": 1
             "student_rating": 10
-        }
+        },
 {
             "name": "Will",
             "major": "physics"
             "teaching_year": 1
             "course_on_charge": 1
             "student_rating": 6
-        }
+        },
 {
             "name": "Clark",
             "major": "math"
             "teaching_year": 8
             "course_on_charge": 3
             "student_rating": 7
-        }
+        },
 {
-            "name": "Steve",
+            "name": "David",
+            "major": "computer"
+            "teaching_year": 3
+            "course_on_charge": 1
+            "student_rating": 9
+        },
+{
+            "name": "Alice",
+            "major": "history"
+            "teaching_year": 3
+            "course_on_charge": 0
+            "student_rating": 7
+        },
+{
+            "name": "Vivian",
             "major": "history"
             "teaching_year": 7
             "course_on_charge": 0
