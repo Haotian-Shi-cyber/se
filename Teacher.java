@@ -4,6 +4,7 @@ public class Teacher extends Person{
     private int num;  //this represents how many course currently
     private int rating;
     private boolean training = false;
+    private Class classes;
 
     public Teacher(String personName,String teachermajor,int teaching_year,int course_num,int student_rating) {
         super(personName,teachermajor);
@@ -26,6 +27,16 @@ public class Teacher extends Person{
         satisfication_score=rating;
         double total_score=0.5*stress_score+0.2*experience_score+0.3*satisfication_score;
         return total_score;
+    }
+
+    public Class get_classes()
+    {
+        return classes;
+    }
+
+    private void set_classes(Class classes)
+    {
+        this.classes = classes;
     }
 
 
