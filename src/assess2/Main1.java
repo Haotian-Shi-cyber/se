@@ -10,7 +10,7 @@ public class Main1 {
 
 	public static void main(String[] args) throws Lopx, IOException, ParseException	{
 		
-		FileProcessor file = new FileProcessor("assess2/teaching_requirements_and_teachers_list.json"); // read JSON file
+		FileProcessor file = new FileProcessor("src/assess2/teaching_requirements_and_teachers_list.json"); // read JSON file
 		file.read_file(); //parse it
 		JSONArray teacherArray = file.get_teachers_array(); // get teaching requirements from file
 		JSONArray classArray = file.get_classes_array(); // get teacher lists from file
