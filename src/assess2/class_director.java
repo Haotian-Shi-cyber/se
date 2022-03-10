@@ -1,13 +1,15 @@
+package assess2;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-public class class_director {
+public class class_director extends Person{
 	
 	private Loc classList;
 	private Lot teacherList;
 	
-	public class_director() {
-		
+	public class_director(String personName,String teachermajor) {
+		super(personName, teachermajor);
 	}
 	
 	public void add_all_staff(JSONArray teacherArray) throws Lopx {

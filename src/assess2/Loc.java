@@ -1,4 +1,4 @@
-/* list of classes  */
+package assess2;/* list of classes  */
 
 public class Loc {
 

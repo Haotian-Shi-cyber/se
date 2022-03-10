@@ -1,3 +1,4 @@
+package assess2;
 
 public class Lot{
     
@@ -13,7 +14,8 @@ public class Lot{
     public int getTeacherNum(){
         return nteachers;
     }
-    
+
+
     public void addTeacher(Teacher teacher) throws Lopx{
 		if (nteachers >= max_teachers)
 			throw new Lopx(max_teachers);

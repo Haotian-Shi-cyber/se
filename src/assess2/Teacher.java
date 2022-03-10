@@ -1,28 +1,26 @@
-public class Teacher {
+package assess2;
 
-    private String name;
-    private String major;
+public class Teacher extends Person{
+
     private int year;
-    private int num;  //this represent how many course currently 
+    private int num;  //this represents how many course currently
     private int rating;
     private boolean training = false;
-    
+    private Class classes;
+
     public Teacher(String personName,String teachermajor,int teaching_year,int course_num,int student_rating) {
-        this.name = personName;
-        this.major= teachermajor;
+        super(personName,teachermajor);
         this.year=teaching_year;
         this.num=course_num;
         this.rating=student_rating;
     }
-    
-    public String getMajor(){
-        return this.major;
+
+    //Returns a string representation of teacher.
+    @Override
+    public String toString() {
+        return getClass().getName() + "@" + Integer.toHexString(hashCode());
     }
-    
-    public String getName() {
-        return this.name;
-    }
-        
+
     public double calScore(){
         double experience_score=0;
         double stress_score=0;
@@ -33,19 +31,34 @@ public class Teacher {
             experience_score=this.year;
         if (num>=3)
             stress_score=0;
-        else 
+        else
             stress_score=(3-this.num)*3;
         satisfication_score=rating;
         double total_score=0.5*stress_score+0.2*experience_score+0.3*satisfication_score;
         return total_score;
     }
-    
+    //Add class in teacher object
+    public Class get_classes()
+    {
+        return classes;
+    }
 
-	public boolean isTraining() {
-		return training;
-	}
+    private void set_classes(Class classes)
+    {
+        this.classes = classes;
+    }
 
-	public void setTraining() {
-		this.training = true;
-	}
+
+    public boolean isTraining() {
+
+        return training;
+    }
+
+    public void setTraining() {
+
+        this.training = true;
+    }
+
+
+
 }

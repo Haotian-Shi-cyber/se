@@ -1,3 +1,4 @@
+package assess2;
 
 public class Person {
 
