@@ -2,30 +2,33 @@ package assess2;
 
 public class Class {
 
-    private String name;
-    private String college;
-    private Teacher teacher;
+    private String name; // class name
+    private String college;// college name
+    private Teacher teacher;// teacher obj who is charge for this class
 
-    //Constructor
+    /* constructor a class obj */
     public Class(String className, String classCollege) {
         this.name = className;
         this.college = classCollege;
     }
 
-    //Get class name and college
+    /* get class name */
     public String getName() {
         return this.name;
 	}
+    
+    /* get class's college name */
     public String getCollege() {
         return this.college;
 	}
 
-    //Add teacher in class object
+    /* get teacher obj */
     public Teacher get_teacher()
     {
         return teacher;
     }
 
+    /* set teacher obj to this class */
     public void set_teacher(Teacher teacher)
     {
         this.teacher = teacher;

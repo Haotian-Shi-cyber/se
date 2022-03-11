@@ -1,21 +1,17 @@
+/* base person class  */
 package assess2;
 
 public class Person {
 
-    private String name;
-    private String major;
+    private String name;// person name
 
-    public Person(String personName,String teachermajor){
+    /* construct this person name */
+    public Person(String personName){
         this.name = personName;
-        this.major= teachermajor;
     }
-
-    public String getMajor(){
-
-        return this.major;
-    }
+    
+    /* return this person name */
     public String getName() {
-
         return this.name;
     }
 

@@ -9,15 +9,16 @@ import java.util.Objects;
 
 public class Admin extends Person{
 
-	private HashMap<String,String> map;
-	private ArrayList<String> trainingList;
-
-	public Admin(String personName,String teachermajor) {
-		super(personName, teachermajor);
+	private HashMap<String,String> map; // used to store result (teacher versus class match)
+	private ArrayList<String> trainingList;// used to store teachers who are training
+	
+	/*Admin constructor to construct administrator name*/
+	public Admin(String personName) {
+		super(personName);
 	}
 
-
-	private String find_suitable_staff(Class thisclass, Lot lot) {// this function return the target teacher name
+	/* a private method to match teacher and class by calculating teaching scores*/
+	private String find_suitable_staff(Class thisclass, Lot lot) {
 		int list_size=lot.getTeacherNum();
 		int index1 = 0;
 		double highest_score = 0;
@@ -38,7 +39,8 @@ public class Admin extends Person{
 		return list[index1].getName();
 		
 	}
-
+	
+	/* a method called private method above to match all teachers to class */
 	public void match_all(Loc classList, Lot teacherList) {
 		String teachername;
 		this.map = new HashMap<String, String>();
@@ -54,12 +56,13 @@ public class Admin extends Person{
 		
 		}
 	}
-
+	
+	/* get hashmap attribute */
 	public HashMap<String,String> get_map() {
 		return this.map;
 	}
 
-
+	/* generate result file */
 	public void create_file() throws IOException {
 		JSONObject result = new JSONObject(this.map);
 		FileWriter file = new FileWriter("result.json");
@@ -67,6 +70,7 @@ public class Admin extends Person{
         file.close();
 	}
 	
+	/* set teachers training status */
 	public void set_training(Lot teacherList) {	
 		for(int i = 0; i < map.size();i++) {
 			Teacher t = teacherList.find(trainingList.get(i));
@@ -74,6 +78,7 @@ public class Admin extends Person{
 		}
 	}
 	
+	/* get training list */
 	public ArrayList<String> get_trainingList() {
 		return this.trainingList;
 	}
