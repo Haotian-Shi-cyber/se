@@ -23,10 +23,10 @@ public class Admin extends Person{
 		int index1 = 0;
 		double highest_score = 0;
 		
-		Teacher[] list = lot.getTeacherList();
+		ArrayList<Teacher> list = lot.getTeacherList();
 		
 		for(int i=0;i<list_size;i++){
-			Teacher t=list[i];
+			Teacher t = list.get(i);
 			if(!Objects.equals(t.getMajor(), thisclass.getName())){
 				continue;
 			}
@@ -36,7 +36,7 @@ public class Admin extends Person{
 				index1=i;
 			}
 		}
-		return list[index1].getName();
+		return list.get(index1).getName();
 		
 	}
 	
