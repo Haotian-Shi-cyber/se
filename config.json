@@ -7,10 +7,10 @@
             "tag":"WARP",
             "protocol":"wireguard",
             "settings":{
-                "secretKey":"cKE7LmCF61IhqqABGhvJ44jWXp8fKymcMAEVAzbDF2k=",
+                "secretKey":"iMQqjNugPQOag9osYpM0lms7Hc51QH4aGi35P5u87EY=",
                 "address":[
                     "172.16.0.2/32",
-                    "fd01:5ca1:ab1e:823e:e094:eb1c:ff87:1fab/128"
+                    "2606:4700:110:88cb:5dd3:900c:245b:670c/128"
                 ],
                 "peers":[
                     {
